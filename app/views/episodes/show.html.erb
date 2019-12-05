@@ -1,0 +1,10 @@
+
+<h1>Episode #<%= @episode.number %></h1>
+<h2> List of guests for Episode <%= @episode.number %></h2>
+<ul>
+<% @appearances.each do |a| %>
+   <% if @episode.number == a.episode.number %>
+    <li><%= a.guest.name %> appeared on The Late Show With Stephen Colbert on <%= a.episode.date %></li> 
+    <% end %>
+<% end %>            
+</ul>
